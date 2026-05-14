@@ -42,6 +42,59 @@ const histories = [
   },
 ];
 
+const relatedPeople = [
+  {
+    name: "大雅省音禅師",
+    role: "円覚寺百二世",
+    connection: "龍隠庵は、大雅省音禅師の塔所として開創された。",
+  },
+  {
+    name: "芳隠省菊禅師",
+    role: "円覚寺百三十七世",
+    connection: "先師・大雅省音禅師の法を継ぎ、龍隠軒を開創した。",
+  },
+  {
+    name: "長尾忠政",
+    role: "開基の檀越",
+    connection: "山内上杉家の家宰として関東管領を支え、禅門への帰依のもと建立を外護した。",
+  },
+  {
+    name: "長尾顕忠・幸春尼",
+    role: "再興の外護者",
+    connection: "永正六年（一五〇九）、幸春尼の外護により龍隠庵は再興を遂げた。",
+  },
+  {
+    name: "石井光雄氏",
+    role: "銀行家",
+    connection: "日本勧業銀行総裁を務め、晩年に現在の龍隠庵の地に居を構えた。",
+  },
+  {
+    name: "鈴木大拙",
+    role: "仏教学者",
+    connection: "禅を世界に紹介した思想家。龍隠庵の地にも学びの縁を結んだ。",
+  },
+  {
+    name: "古田紹欽博士",
+    role: "仏教学者",
+    connection: "鈴木大拙に師事し、禅と茶の精神を探究。晩年をこの庵で過ごした。",
+  },
+  {
+    name: "藤沢寂仙氏",
+    role: "茶道宗匠",
+    connection: "楽々庵に住まい、茶の湯とともにこの場所の精神を体現した。",
+  },
+  {
+    name: "亀井要氏",
+    role: "実業家",
+    connection: "三省堂社長として出版文化を支え、この地に身を置いた。",
+  },
+  {
+    name: "太田周文和尚",
+    role: "現住職",
+    connection: "平成十一年（一九九九）に現在地へ移転・復興し、龍隠庵の再興を進めている。",
+  },
+];
+
 const supportPathways = [
   {
     title: "復興支援",
@@ -97,6 +150,9 @@ export default function Home() {
             </a>
             <a href="#vision" className="transition hover:text-stone-900">
               構想
+            </a>
+            <a href="#people" className="transition hover:text-stone-900">
+              人物
             </a>
             <a href="#contact" className="transition hover:text-stone-900">
               問合
@@ -157,7 +213,7 @@ export default function Home() {
                 平成十一年（一九九九）、現住職・太田周文和尚が復興の志を抱いて現在地へ移転し、住職に就任しました。この境内地には、かつて日本勧業銀行総裁を務めた石井光雄氏（一八八一-一九六六）の居宅がありました。
               </p>
               <p className="leading-[2.35]">
-                希少典籍を収めた「積翠軒文庫」、そして茶室「楽々庵」。この場所は、多くの文化人、学者、財界人が集う、静かな交流の場でもありました。石井氏没後も、茶道宗匠の藤沢寂仙氏、実業家の亀井要氏、仏教学者の古田紹欽博士らがこの地に住まわれました。龍隠庵の復興は、寺院としての再建であると同時に、この土地に宿っていた文化の気配を、もう一度ひらく営みでもあります。
+                希少典籍を収めた「積翠軒文庫」、そして茶室「楽々庵」。この場所は、多くの文化人、学者、財界人が集う、静かな交流の場でもありました。石井氏没後も、禅を世界に紹介した鈴木大拙がこの地で学び、仏教学者の古田紹欽博士は鈴木大拙に師事して禅と茶の精神を探究し、晩年をこの庵で過ごしました。龍隠庵の復興は、寺院としての再建であると同時に、この土地に宿っていた文化の気配を、もう一度ひらく営みでもあります。
               </p>
             </article>
 
@@ -198,6 +254,42 @@ export default function Home() {
                   </p>
                   <p className="leading-[2.05] text-stone-700">
                     {history.text}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="people" className="px-6 pb-28 sm:pb-36">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+            <div className="animate-fade-up">
+              <p className="text-xs tracking-[0.45em] text-stone-400">
+                PEOPLE
+              </p>
+              <h2 className="mt-5 font-serif text-3xl font-light leading-relaxed tracking-[0.14em] text-stone-900">
+                関連する人物
+              </h2>
+            </div>
+            <div className="overflow-hidden border-y border-stone-200/80 font-serif">
+              {relatedPeople.map((person, index) => (
+                <article
+                  key={person.name}
+                  className="grid gap-4 border-b border-stone-200/70 py-6 last:border-b-0 sm:grid-cols-[0.12fr_0.28fr_0.2fr_0.4fr]"
+                >
+                  <p className="text-xs leading-loose tracking-[0.2em] text-stone-400">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="text-lg font-light leading-loose tracking-[0.12em] text-stone-900">
+                    {person.name}
+                  </h3>
+                  <p className="text-sm leading-loose tracking-[0.08em] text-stone-500">
+                    {person.role}
+                  </p>
+                  <p className="leading-[2.05] text-stone-700">
+                    {person.connection}
                   </p>
                 </article>
               ))}
