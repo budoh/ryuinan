@@ -11,7 +11,6 @@ const programs = [
   "香道",
   "書道",
   "能・狂言",
-  "浪曲",
   "坐禅",
   "鎌倉彫",
   "学び",
@@ -96,8 +95,8 @@ const supportPathways = [
     text: "楽々庵、積翠軒文庫遺構、参道や境内環境の整備に関するご支援の相談窓口。",
   },
   {
-    title: "作務と縁",
-    text: "日々の作務を第一義とし、その営みの縁から茶の湯、書、芸能、坐禅、工芸などが静かに育つ場づくり。",
+    title: "場づくり",
+    text: "日々の作務を重ねながら、茶の湯、書、芸能、坐禅、工芸などが静かに息づく場を整えていきます。",
   },
   {
     title: "見学・取材",
@@ -108,7 +107,7 @@ const supportPathways = [
 const contactTopics = [
   "復興支援・寄進のご相談",
   "楽々庵・積翠軒文庫遺構の修復について",
-  "作務と場づくりに関するご相談",
+  "場づくりに関するご相談",
   "見学・取材のお問い合わせ",
 ];
 
@@ -172,6 +171,21 @@ export default function Home() {
               復興へのお問い合わせ
             </a>
           </div>
+        </div>
+      </section>
+
+      <section className="relative px-6 py-32 sm:py-44">
+        <div className="absolute inset-x-10 top-1/2 h-px bg-gradient-to-r from-transparent via-stone-300/70 to-transparent" />
+        <div className="relative mx-auto max-w-3xl text-center animate-fade-up">
+          <p className="text-xs tracking-[0.45em] text-stone-400">
+            PHILOSOPHY
+          </p>
+          <h2 className="mt-7 font-serif text-4xl font-light tracking-[0.2em] text-stone-950 sm:text-5xl">
+            怨親平等
+          </h2>
+          <p className="mx-auto mt-10 max-w-2xl font-serif text-lg leading-[2.35] text-stone-600">
+            親しいものも、遠いものも、敵も味方も、ひとしく弔い、祈ること。円覚寺は、鎌倉幕府第八代執権・北条時宗により、元寇による戦没者を敵味方の区別なく弔う「怨親平等」の理念のもと、弘安五年（一二八二年）に創建されました。その精神を受け継ぎ、龍隠庵は分け隔ての心をほどく文化と祈りの場を目指します。
+          </p>
         </div>
       </section>
 
@@ -259,7 +273,7 @@ export default function Home() {
 
       <section id="people" className="px-6 pb-28 sm:pb-36">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <div className="grid gap-12 lg:grid-cols-[0.42fr_1.58fr] lg:gap-16">
             <div className="animate-fade-up">
               <p className="text-xs tracking-[0.45em] text-stone-400">
                 PEOPLE
@@ -272,7 +286,7 @@ export default function Home() {
               {relatedPeople.map((person, index) => (
                 <article
                   key={person.name}
-                  className="grid gap-4 border-b border-stone-200/70 py-6 last:border-b-0 sm:grid-cols-[0.12fr_0.28fr_0.2fr_0.4fr]"
+                  className="grid gap-4 border-b border-stone-200/70 py-6 last:border-b-0 md:grid-cols-[3rem_13rem_8rem_1fr] md:gap-8"
                 >
                   <p className="text-xs leading-loose tracking-[0.2em] text-stone-400">
                     {String(index + 1).padStart(2, "0")}
@@ -330,16 +344,18 @@ export default function Home() {
 
       <section id="vision" className="border-y border-stone-200/70 bg-white/42 px-6 py-28 sm:py-36">
         <div className="mx-auto max-w-6xl">
-          <div className="max-w-2xl animate-fade-up">
+          <div className="grid gap-12 lg:grid-cols-[0.42fr_1.58fr] lg:gap-16">
+            <div className="animate-fade-up">
             <p className="text-xs tracking-[0.45em] text-stone-400">
               VISION
             </p>
             <h2 className="mt-5 font-serif text-3xl font-light tracking-[0.14em] text-stone-900 sm:text-4xl">
               今後の構想
             </h2>
+            </div>
           </div>
 
-          <div className="mt-16 grid grid-cols-2 gap-px bg-stone-200/70 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="mt-16 grid grid-cols-1 gap-px bg-stone-200/70 sm:grid-cols-3">
             {programs.map((program) => (
               <div
                 key={program}
@@ -374,23 +390,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative px-6 py-32 sm:py-44">
-        <div className="absolute inset-x-10 top-1/2 h-px bg-gradient-to-r from-transparent via-stone-300/70 to-transparent" />
-        <div className="relative mx-auto max-w-3xl text-center animate-fade-up">
-          <p className="text-xs tracking-[0.45em] text-stone-400">
-            PHILOSOPHY
-          </p>
-          <h2 className="mt-7 font-serif text-4xl font-light tracking-[0.2em] text-stone-950 sm:text-5xl">
-            怨親平等
-          </h2>
-          <p className="mx-auto mt-10 max-w-2xl font-serif text-lg leading-[2.35] text-stone-600">
-            親しいものも、遠いものも、敵も味方も、ひとしく弔い、祈ること。円覚寺は、鎌倉幕府第八代執権・北条時宗により、元寇による戦没者を敵味方の区別なく弔う「怨親平等」の理念のもと、弘安五年（一二八二年）に創建されました。その精神を受け継ぎ、龍隠庵は分け隔ての心をほどく文化と祈りの場を目指します。
-          </p>
-        </div>
-      </section>
-
       <section id="contact" className="border-y border-stone-200/80 bg-[#fbfaf6]/70 px-6 py-24 sm:py-32">
-        <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+        <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-[0.42fr_1.58fr] lg:gap-16">
           <div className="animate-fade-up">
             <p className="text-xs tracking-[0.45em] text-stone-500">
               CONTACT
