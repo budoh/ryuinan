@@ -23,6 +23,40 @@ const programs = [
   "交流",
 ];
 
+const histories = [
+  {
+    era: "応永二十六年（一四一九）頃",
+    text: "円覚寺百三十七世・芳隠省菊禅師が、長尾忠政の外護を得て、先師・百二世大雅省音禅師の塔所「龍隠軒」を開創。",
+  },
+  {
+    era: "応永三十三年（一四二六）",
+    text: "法珠院の衰退にともない独立し、円覚寺塔頭列に加わる。「龍隠庵」と改称。",
+  },
+  {
+    era: "永正六年（一五〇九）",
+    text: "長尾顕忠の妻・幸春尼の外護により再興。以後、火災や移転を経ながら法灯をつなぐ。",
+  },
+  {
+    era: "近代から平成へ",
+    text: "石井光雄氏、藤沢寂仙氏、亀井要氏、古田紹欽博士らがこの地に縁を結び、平成十一年（一九九九）に現在地へ移転・復興。",
+  },
+];
+
+const supportPathways = [
+  {
+    title: "復興支援",
+    text: "楽々庵、積翠軒文庫遺構、参道や境内環境の整備に関するご支援の相談窓口。",
+  },
+  {
+    title: "文化活動",
+    text: "茶の湯、書、芸能、坐禅、工芸、講座など、この場で育てる文化プログラムの相談窓口。",
+  },
+  {
+    title: "見学・取材",
+    text: "復興の歩み、由緒、写真・記録、文化施設としての構想に関する問い合わせ窓口。",
+  },
+];
+
 const contactTopics = [
   "復興支援・寄進のご相談",
   "楽々庵・積翠軒文庫遺構の修復について",
@@ -108,10 +142,10 @@ export default function Home() {
                 十五世紀から続く小さな庵
               </h3>
               <p className="leading-[2.35]">
-                龍隠庵の歴史は、十五世紀初頭に遡ります。当時の円覚寺任持であった宝印省菊禅師が、先師である大雅省音禅師の塔所として、長尾忠政を開基に「法珠院」を創建しました。その折、自らの寮舎として境内に建立した「龍隠軒」。それが、当庵のはじまりと伝えられています。
+                龍隠庵の歴史は、室町時代初頭の応永二十六年（一四一九）頃に遡ります。円覚寺百三十七世・芳隠省菊禅師が、長尾忠政の外護を得て、先師である百二世・大雅省音禅師の塔所として「龍隠軒」を開創しました。それが、当庵のはじまりと伝えられています。
               </p>
               <p className="leading-[2.35]">
-                その後、龍隠軒は独立した一寺となり、円覚寺の塔頭に連なりました。十六世紀初頭には、長尾氏ゆかりの幸春尼の外護によって再興を遂げます。江戸時代から十九世紀半ばにかけては移転と衰微を重ね、明治期以降には住職不在となり、廃寺同然の窮状に至った時期もありました。
+                応永三十三年（一四二六）、龍隠軒は独立した一寺となり、円覚寺の塔頭列に加わって「龍隠庵」と改称しました。永正六年（一五〇九）には、長尾顕忠の妻・幸春尼の外護によって再興を遂げます。以後、火災や移転、衰微を重ねながらも、その法灯は静かにつながれてきました。
               </p>
             </article>
 
@@ -120,10 +154,10 @@ export default function Home() {
                 文化人が集った静かな土地
               </h3>
               <p className="leading-[2.35]">
-                一九九〇年代後半、現住職・太田周文和尚が復興の志を抱いて入寺し、五年の歳月をかけて現在の地へ移転しました。この境内地には、かつて日本勧業銀行総裁を務めた石井光雄氏（一八八一-一九六六）の居宅がありました。
+                平成十一年（一九九九）、現住職・太田周文和尚が復興の志を抱いて現在地へ移転し、住職に就任しました。この境内地には、かつて日本勧業銀行総裁を務めた石井光雄氏（一八八一-一九六六）の居宅がありました。
               </p>
               <p className="leading-[2.35]">
-                希少典籍を収めた「積翠軒文庫」、そして茶室「楽々庵」。この場所は、多くの文化人、学者、財界人が集う、静かな交流の場でもありました。石井氏没後も、仏教学者の古田紹欽氏、実業家の亀井要氏、茶人の藤澤寂仙氏らがこの地に住まわれました。龍隠庵の復興は、寺院としての再建であると同時に、この土地に宿っていた文化の気配を、もう一度ひらく営みでもあります。
+                希少典籍を収めた「積翠軒文庫」、そして茶室「楽々庵」。この場所は、多くの文化人、学者、財界人が集う、静かな交流の場でもありました。石井氏没後も、茶道宗匠の藤沢寂仙氏、実業家の亀井要氏、仏教学者の古田紹欽博士らがこの地に住まわれました。龍隠庵の復興は、寺院としての再建であると同時に、この土地に宿っていた文化の気配を、もう一度ひらく営みでもあります。
               </p>
             </article>
 
@@ -138,6 +172,36 @@ export default function Home() {
                 まずは文化施設としての「楽々庵」と「積翠軒文庫遺構」の修復・再建へ。ゆくゆくは大雅省音禅師を祀る開山堂、御本尊を祀る本堂の再興を見据えながら、伝統文化、芸能、禅文化、工芸、学びの場を育てていくこと。多様な文化活動を通じて、人々が交流し、親善を深める一助となること。それが、龍隠庵の願いです。
               </p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 pb-28 sm:pb-36">
+        <div className="mx-auto max-w-6xl border-y border-stone-200/80 py-16">
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+            <div className="animate-fade-up">
+              <p className="text-xs tracking-[0.45em] text-stone-400">
+                HISTORY
+              </p>
+              <h2 className="mt-5 font-serif text-3xl font-light leading-relaxed tracking-[0.14em] text-stone-900">
+                由緒の記憶
+              </h2>
+            </div>
+            <div className="divide-y divide-stone-200/80 font-serif">
+              {histories.map((history) => (
+                <article
+                  key={history.era}
+                  className="grid gap-4 py-7 first:pt-0 last:pb-0 sm:grid-cols-[0.38fr_0.62fr]"
+                >
+                  <p className="text-sm leading-loose tracking-[0.16em] text-stone-500">
+                    {history.era}
+                  </p>
+                  <p className="leading-[2.05] text-stone-700">
+                    {history.text}
+                  </p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -198,6 +262,26 @@ export default function Home() {
                   {program}
                 </p>
               </div>
+            ))}
+          </div>
+
+          <div className="mt-20 grid gap-px bg-stone-200/70 lg:grid-cols-3">
+            {supportPathways.map((pathway) => (
+              <a
+                key={pathway.title}
+                href={contactHref}
+                className="group bg-[#fbfaf6] px-7 py-8 transition duration-500 hover:bg-white"
+              >
+                <p className="font-serif text-xl font-light tracking-[0.16em] text-stone-900">
+                  {pathway.title}
+                </p>
+                <p className="mt-5 font-serif leading-[2.05] text-stone-600">
+                  {pathway.text}
+                </p>
+                <p className="mt-7 text-xs tracking-[0.28em] text-stone-400 transition group-hover:text-stone-700">
+                  CONTACT
+                </p>
+              </a>
             ))}
           </div>
         </div>
