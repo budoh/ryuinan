@@ -307,7 +307,7 @@ export default function Home() {
                 alt="水面に浮かぶ淡い花のしつらえ"
                 fill
                 sizes="(min-width: 1024px) 704px, 100vw"
-                className="object-cover opacity-92 saturate-[0.82]"
+                className="object-cover object-[center_35%] opacity-92 saturate-[0.82]"
               />
               <div
                 className="absolute inset-0 bg-gradient-to-b from-[#f7f6ec]/10 via-transparent to-[#f7f6ec]/20"
