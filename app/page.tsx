@@ -16,7 +16,6 @@ const programs = [
   "浪曲",
   "坐禅",
   "ヨガ",
-  "瞑想",
   "陶芸",
   "鎌倉彫",
   "講座・勉強会",
@@ -182,7 +181,7 @@ export default function Home() {
 
       <section id="about" className="relative px-6 py-28 sm:py-36 lg:py-44">
         <div className="absolute inset-0 moss-wash" aria-hidden="true" />
-        <div className="relative mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
+        <div className="relative mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.42fr_1.58fr] lg:gap-16">
           <div className="animate-fade-up">
             <p className="text-xs tracking-[0.45em] text-stone-400">
               ABOUT
