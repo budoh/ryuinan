@@ -351,9 +351,8 @@ export default function Home() {
               <p className="text-xs tracking-[0.45em] text-stone-400">
                 VISION
               </p>
-              <h2 className="mt-5 font-serif text-3xl font-light leading-relaxed tracking-[0.14em] text-stone-900 sm:text-4xl">
-                <span className="block">今後の</span>
-                <span className="block">構想</span>
+              <h2 className="mt-5 font-serif text-3xl font-light tracking-[0.14em] text-stone-900 sm:text-4xl">
+                今後の構想
               </h2>
             </div>
           </div>
@@ -393,26 +392,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="border-y border-stone-200/80 bg-[#fbfaf6]/70 px-6 py-24 sm:py-32">
+      <section id="contact" className="border-y border-stone-300/80 bg-[#fbfaf6] px-6 py-24 sm:py-32">
         <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-[0.42fr_1.58fr] lg:gap-16">
           <div className="animate-fade-up">
-            <p className="text-xs tracking-[0.45em] text-stone-600">
+            <p className="text-xs tracking-[0.45em] text-stone-700">
               CONTACT
             </p>
-            <h2 className="mt-5 font-serif text-3xl font-light leading-relaxed tracking-[0.14em] text-stone-950 sm:text-4xl">
+            <h2 className="mt-5 font-serif text-3xl font-normal leading-relaxed tracking-[0.14em] text-stone-950 sm:text-4xl">
               <span className="block">復興への</span>
               <span className="block">お問い合わせ</span>
             </h2>
           </div>
 
-          <div className="animate-fade-up font-serif text-stone-800">
+          <div className="animate-fade-up font-serif text-stone-950">
             <p className="max-w-2xl leading-[2.25]">
               龍隠庵の復興、作務を中心とした場づくり、見学・取材に関するご連絡は、下記メールアドレスまでお寄せください。内容を確認のうえ、順次ご返信いたします。
             </p>
-            <div className="mt-10 grid gap-px bg-stone-300/80 sm:grid-cols-2">
+            <div className="mt-10 grid gap-px bg-stone-400/70 sm:grid-cols-2">
               {contactTopics.map((topic) => (
-                <div key={topic} className="bg-[#f7f6ec] px-6 py-6">
-                  <p className="text-sm leading-relaxed tracking-[0.08em] text-stone-800">
+                <div key={topic} className="bg-white/55 px-6 py-6">
+                  <p className="text-sm font-medium leading-relaxed tracking-[0.08em] text-stone-950">
                     {topic}
                   </p>
                 </div>
@@ -420,7 +419,7 @@ export default function Home() {
             </div>
             <a
               href={contactHref}
-              className="mt-10 inline-flex border border-stone-600/70 px-7 py-4 text-sm tracking-[0.18em] text-stone-900 transition hover:border-stone-950 hover:bg-white hover:text-stone-950"
+              className="mt-10 inline-flex border border-stone-800 px-7 py-4 text-sm font-medium tracking-[0.18em] text-stone-950 transition hover:border-stone-950 hover:bg-white"
             >
               {contactEmail}
             </a>
