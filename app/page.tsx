@@ -1,65 +1,184 @@
 import Image from "next/image";
 
+const programs = [
+  "茶道",
+  "華道",
+  "香道",
+  "書道",
+  "能・狂言",
+  "坐禅",
+  "空手道",
+  "居合道",
+  "文化交流",
+];
+
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <main className="min-h-screen overflow-hidden bg-[#f7f5ef] text-stone-900">
+      <section className="relative flex min-h-screen items-center justify-center px-6 py-24">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+          src="/images/ryuinan-view.jpeg"
+          alt=""
+          fill
           priority
+          sizes="100vw"
+          className="object-cover object-center opacity-38 saturate-[0.62]"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+        <div className="absolute inset-0 bg-[#f7f5ef]/55" aria-hidden="true" />
+        <div
+          className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,transparent_36%,#f7f5ef_82%)]"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 washi-texture opacity-80" aria-hidden="true" />
+        <div
+          className="absolute left-1/2 top-1/2 h-[58vw] max-h-[640px] w-[58vw] max-w-[640px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-stone-300/30 opacity-50 blur-[1px]"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-4xl text-center animate-breathe-in">
+          <p className="mb-7 text-xs tracking-[0.72em] text-stone-500 sm:text-sm">
+            RYUINAN
+          </p>
+          <h1 className="font-serif text-6xl font-light tracking-[0.18em] text-stone-950 sm:text-7xl md:text-8xl">
+            龍隠庵
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="mx-auto mt-12 max-w-2xl font-serif text-xl leading-[2.15] text-stone-600 sm:text-2xl">
+            静けさの中で、人が少し深呼吸できる場所。
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="relative px-6 py-28 sm:py-36 lg:py-44">
+        <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
+          <div className="animate-fade-up">
+            <p className="text-xs tracking-[0.45em] text-stone-400">
+              ABOUT
+            </p>
+            <h2 className="mt-5 font-serif text-3xl font-light leading-relaxed tracking-[0.14em] text-stone-900 sm:text-4xl">
+              龍隠庵について
+            </h2>
+          </div>
+
+          <div className="space-y-14 font-serif text-stone-700">
+            <article className="animate-fade-up space-y-6">
+              <h3 className="text-xl font-light tracking-[0.16em] text-stone-900">
+                十五世紀から続く小さな庵
+              </h3>
+              <p className="leading-[2.35]">
+                龍隠庵の歴史は、十五世紀初頭に遡ります。円覚寺の高僧・宝印省菊禅師が、先師である大雅省音禅師の塔所として法珠院を創建した折、自らの寮舎として境内に建てた「龍隠軒」。それが、当庵のはじまりと伝えられています。
+              </p>
+              <p className="leading-[2.35]">
+                その後、龍隠軒は独立した一寺となり、円覚寺の塔頭に連なりました。長尾氏ゆかりの外護を受けながら再興を遂げた時代もあれば、江戸から近代にかけて移転と衰微を重ね、明治期以降には住職不在となり、廃寺同然の窮状に至った時期もありました。
+              </p>
+            </article>
+
+            <article className="animate-fade-up space-y-6">
+              <h3 className="text-xl font-light tracking-[0.16em] text-stone-900">
+                文化人が集った静かな土地
+              </h3>
+              <p className="leading-[2.35]">
+                一九九〇年代後半、現住職・太田周文和尚が復興の志を抱いて入寺し、五年の歳月をかけて現在の地へ移転しました。この境内地には、かつて日本勧業銀行総裁を務めた石井光雄氏の居宅がありました。
+              </p>
+              <p className="leading-[2.35]">
+                希少典籍を収めた「積翠軒文庫」、そして茶室「楽々庵」。この場所は、多くの文化人、学者、財界人が集う、静かな交流の場でもありました。龍隠庵の復興は、寺院としての再建であると同時に、この土地に宿っていた文化の気配を、もう一度ひらく営みでもあります。
+              </p>
+            </article>
+
+            <article className="animate-fade-up space-y-6">
+              <h3 className="text-xl font-light tracking-[0.16em] text-stone-900">
+                復興への願い
+              </h3>
+              <p className="leading-[2.35]">
+                平成十二年（二〇〇〇年）より、裏山の整備や参道階段の造作など、基礎となる環境づくりが少しずつ進められてきました。東日本大震災、コロナ禍、そして長い時間の中で、本格的な建造物の再建はなお道半ばにあります。
+              </p>
+              <p className="leading-[2.35]">
+                まずは文化施設としての「楽々庵」と「積翠軒文庫遺構」の修復・再建へ。ゆくゆくは開山堂、本堂の再興を見据えながら、茶道、華道、香道、書道、空手道、居合道、坐禅、芸能、学びの場を育てていくこと。多様な文化活動を通じて、人々が交流し、親善を深める一助となること。それが、龍隠庵の願いです。
+              </p>
+            </article>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="px-6 pb-28 sm:pb-36">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
+            <figure className="relative h-[360px] overflow-hidden sm:h-[500px]">
+              <Image
+                src="/images/ryuinan-flower-water.jpeg"
+                alt="水面に浮かぶ淡い花のしつらえ"
+                fill
+                sizes="(min-width: 1024px) 704px, 100vw"
+                className="object-cover opacity-90 saturate-[0.7]"
+              />
+              <div
+                className="absolute inset-0 bg-gradient-to-b from-[#f7f5ef]/10 via-transparent to-[#f7f5ef]/25"
+                aria-hidden="true"
+              />
+            </figure>
+
+            <figure className="relative h-[360px] overflow-hidden sm:h-[500px]">
+              <Image
+                src="/images/ryuinan-calligraphy.jpeg"
+                alt="龍隠起雲と記された書"
+                fill
+                sizes="(min-width: 1024px) 424px, 100vw"
+                className="object-cover object-center opacity-88 saturate-[0.62]"
+              />
+              <div
+                className="absolute inset-0 bg-[#f7f5ef]/10"
+                aria-hidden="true"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-stone-200/70 bg-white/42 px-6 py-28 sm:py-36">
+        <div className="mx-auto max-w-6xl">
+          <div className="max-w-2xl animate-fade-up">
+            <p className="text-xs tracking-[0.45em] text-stone-400">
+              VISION
+            </p>
+            <h2 className="mt-5 font-serif text-3xl font-light tracking-[0.14em] text-stone-900 sm:text-4xl">
+              今後の構想
+            </h2>
+          </div>
+
+          <div className="mt-16 grid grid-cols-2 gap-px bg-stone-200/70 sm:grid-cols-3 lg:grid-cols-5">
+            {programs.map((program) => (
+              <div
+                key={program}
+                className="group flex min-h-36 items-center justify-center bg-[#fbfaf6] px-5 py-10 transition duration-500 hover:bg-white"
+              >
+                <p className="font-serif text-lg font-light tracking-[0.18em] text-stone-700 transition duration-500 group-hover:text-stone-950">
+                  {program}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative px-6 py-32 sm:py-44">
+        <div className="absolute inset-x-10 top-1/2 h-px bg-gradient-to-r from-transparent via-stone-300/70 to-transparent" />
+        <div className="relative mx-auto max-w-3xl text-center animate-fade-up">
+          <p className="text-xs tracking-[0.45em] text-stone-400">
+            PHILOSOPHY
+          </p>
+          <h2 className="mt-7 font-serif text-4xl font-light tracking-[0.2em] text-stone-950 sm:text-5xl">
+            怨親平等
+          </h2>
+          <p className="mx-auto mt-10 max-w-2xl font-serif text-lg leading-[2.35] text-stone-600">
+            親しいものも、遠いものも、敵も味方も、ひとしく弔い、祈ること。円覚寺開創の理念である「怨親平等」の精神を受け継ぎ、龍隠庵は分け隔ての心をほどく文化と祈りの場を目指します。
+          </p>
+        </div>
+      </section>
+
+      <footer className="border-t border-stone-200/80 px-6 py-10">
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 text-xs tracking-[0.28em] text-stone-400 sm:flex-row sm:items-center sm:justify-between">
+          <p>龍隠庵</p>
+          <p>RYUINAN RESTORATION</p>
+        </div>
+      </footer>
+    </main>
   );
 }
