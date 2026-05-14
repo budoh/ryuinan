@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "龍隠庵 | RYUINAN",
-  description: "静けさの中で、人が少し深呼吸できる場所。龍隠庵の復興サイト。",
+  description: "静けさが息づく場。龍隠庵の復興サイト。",
 };
 
 export default function RootLayout({

@@ -42,7 +42,7 @@ export default function Home() {
             龍隠庵
           </h1>
           <p className="mx-auto mt-12 max-w-2xl font-serif text-xl leading-[2.15] text-stone-600 sm:text-2xl">
-            静けさの中で、人が少し深呼吸できる場所。
+            静けさが息づく場。
           </p>
         </div>
       </section>
