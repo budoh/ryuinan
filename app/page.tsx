@@ -1,5 +1,10 @@
 import Image from "next/image";
 
+const contactEmail = "ryuinan1@gmail.com";
+const contactHref = `mailto:${contactEmail}?subject=${encodeURIComponent(
+  "龍隠庵復興についての問い合わせ",
+)}`;
+
 const programs = [
   "茶道",
   "華道",
@@ -18,10 +23,17 @@ const programs = [
   "交流",
 ];
 
+const contactTopics = [
+  "復興支援・寄進のご相談",
+  "楽々庵・積翠軒文庫遺構の修復について",
+  "文化活動・講座開催のご相談",
+  "見学・取材のお問い合わせ",
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#f7f6ec] text-stone-900">
-      <section className="relative flex min-h-screen items-center justify-center px-6 py-24">
+      <section id="top" className="relative flex min-h-screen items-center justify-center px-6 py-24">
         <Image
           src="/images/ryuinan-hidden-approach.jpeg"
           alt=""
@@ -41,6 +53,22 @@ export default function Home() {
           className="absolute left-1/2 top-1/2 h-[58vw] max-h-[640px] w-[58vw] max-w-[640px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#b8b06b]/25 opacity-55 blur-[1px]"
           aria-hidden="true"
         />
+        <nav className="absolute inset-x-6 top-6 z-10 mx-auto flex max-w-6xl items-center justify-between text-[11px] tracking-[0.28em] text-stone-500 sm:text-xs">
+          <a href="#top" className="transition hover:text-stone-900">
+            龍隠庵
+          </a>
+          <div className="flex items-center gap-5 sm:gap-8">
+            <a href="#about" className="transition hover:text-stone-900">
+              沿革
+            </a>
+            <a href="#vision" className="transition hover:text-stone-900">
+              構想
+            </a>
+            <a href="#contact" className="transition hover:text-stone-900">
+              問合
+            </a>
+          </div>
+        </nav>
         <div className="relative mx-auto max-w-4xl text-center animate-breathe-in">
           <p className="mb-7 text-xs tracking-[0.72em] text-stone-500 sm:text-sm">
             RYUINAN
@@ -51,10 +79,18 @@ export default function Home() {
           <p className="mx-auto mt-12 max-w-2xl font-serif text-xl leading-[2.15] text-stone-600 sm:text-2xl">
             静けさが息づく場。
           </p>
+          <div className="mt-12 flex justify-center">
+            <a
+              href="#contact"
+              className="border border-stone-400/50 px-7 py-3 text-xs tracking-[0.32em] text-stone-700 transition hover:border-stone-700 hover:bg-white/35 hover:text-stone-950"
+            >
+              復興へのお問い合わせ
+            </a>
+          </div>
         </div>
       </section>
 
-      <section className="relative px-6 py-28 sm:py-36 lg:py-44">
+      <section id="about" className="relative px-6 py-28 sm:py-36 lg:py-44">
         <div className="absolute inset-0 moss-wash" aria-hidden="true" />
         <div className="relative mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
           <div className="animate-fade-up">
@@ -141,7 +177,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-stone-200/70 bg-white/42 px-6 py-28 sm:py-36">
+      <section id="vision" className="border-y border-stone-200/70 bg-white/42 px-6 py-28 sm:py-36">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-2xl animate-fade-up">
             <p className="text-xs tracking-[0.45em] text-stone-400">
@@ -182,10 +218,46 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="contact" className="border-y border-stone-200/80 bg-[#fbfaf6]/70 px-6 py-24 sm:py-32">
+        <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+          <div className="animate-fade-up">
+            <p className="text-xs tracking-[0.45em] text-stone-400">
+              CONTACT
+            </p>
+            <h2 className="mt-5 font-serif text-3xl font-light tracking-[0.14em] text-stone-900 sm:text-4xl">
+              復興へのお問い合わせ
+            </h2>
+          </div>
+
+          <div className="animate-fade-up font-serif text-stone-700">
+            <p className="max-w-2xl leading-[2.25]">
+              龍隠庵の復興、文化活動、見学・取材に関するご連絡は、下記メールアドレスまでお寄せください。内容を確認のうえ、順次ご返信いたします。
+            </p>
+            <div className="mt-10 grid gap-px bg-stone-200/70 sm:grid-cols-2">
+              {contactTopics.map((topic) => (
+                <div key={topic} className="bg-[#f7f6ec] px-6 py-6">
+                  <p className="text-sm leading-relaxed tracking-[0.08em] text-stone-700">
+                    {topic}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <a
+              href={contactHref}
+              className="mt-10 inline-flex border border-stone-500/60 px-7 py-4 text-sm tracking-[0.18em] text-stone-800 transition hover:border-stone-900 hover:bg-white hover:text-stone-950"
+            >
+              {contactEmail}
+            </a>
+          </div>
+        </div>
+      </section>
+
       <footer className="border-t border-stone-200/80 px-6 py-10">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 text-xs tracking-[0.28em] text-stone-400 sm:flex-row sm:items-center sm:justify-between">
           <p>龍隠庵</p>
-          <p>RYUINAN RESTORATION</p>
+          <a href={contactHref} className="transition hover:text-stone-700">
+            RYUINAN RESTORATION
+          </a>
         </div>
       </footer>
     </main>
