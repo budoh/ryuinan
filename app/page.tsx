@@ -11,14 +11,10 @@ const programs = [
   "香道",
   "書道",
   "能・狂言",
-  "落語",
-  "講談",
   "浪曲",
   "坐禅",
-  "ヨガ",
-  "陶芸",
   "鎌倉彫",
-  "講座・勉強会",
+  "学び",
   "交流",
 ];
 
@@ -100,8 +96,8 @@ const supportPathways = [
     text: "楽々庵、積翠軒文庫遺構、参道や境内環境の整備に関するご支援の相談窓口。",
   },
   {
-    title: "文化活動",
-    text: "茶の湯、書、芸能、坐禅、工芸、講座など、この場で育てる文化プログラムの相談窓口。",
+    title: "作務と縁",
+    text: "日々の作務を第一義とし、その営みの縁から茶の湯、書、芸能、坐禅、工芸などが静かに育つ場づくり。",
   },
   {
     title: "見学・取材",
@@ -112,7 +108,7 @@ const supportPathways = [
 const contactTopics = [
   "復興支援・寄進のご相談",
   "楽々庵・積翠軒文庫遺構の修復について",
-  "文化活動・講座開催のご相談",
+  "作務と場づくりに関するご相談",
   "見学・取材のお問い合わせ",
 ];
 
@@ -224,7 +220,7 @@ export default function Home() {
                 平成十二年（二〇〇〇年）より、裏山の伐採や参道階段の造作など、基礎となる環境づくりが少しずつ進められてきました。東日本大震災、コロナ禍、そして長い時間の中で、本格的な建造物の再建はなお道半ばにあります。
               </p>
               <p className="leading-[2.35]">
-                かの鈴木大拙が学んだ「積翠軒文庫遺構」と、茶の湯の精神が交わる「楽々庵」の修復・再建へ。ゆくゆくは大雅省音禅師を祀る開山堂、御本尊を祀る本堂の再興を見据えながら、伝統文化、芸能、禅文化、工芸、学びの場を育てていくこと。多様な文化活動を通じて、人々が交流し、親善を深める一助となること。それが、龍隠庵の願いです。
+                かの鈴木大拙が学んだ「積翠軒文庫遺構」と、茶の湯の精神が交わる「楽々庵」の修復・再建へ。ゆくゆくは大雅省音禅師を祀る開山堂、御本尊を祀る本堂の再興を見据えながら、まずは日々の作務を重ねること。その営みの縁の中で、伝統文化、芸能、禅文化、工芸、学びの場が静かに育ち、人々が交流し、親善を深める一助となること。それが、龍隠庵の願いです。
               </p>
             </article>
           </div>
@@ -233,7 +229,7 @@ export default function Home() {
 
       <section className="px-6 pb-28 sm:pb-36">
         <div className="mx-auto max-w-6xl border-y border-stone-200/80 py-16">
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <div className="grid gap-12 lg:grid-cols-[0.42fr_1.58fr] lg:gap-16">
             <div className="animate-fade-up">
               <p className="text-xs tracking-[0.45em] text-stone-400">
                 HISTORY
@@ -246,12 +242,12 @@ export default function Home() {
               {histories.map((history) => (
                 <article
                   key={history.era}
-                  className="grid gap-4 py-7 first:pt-0 last:pb-0 sm:grid-cols-[0.38fr_0.62fr]"
+                  className="grid gap-4 py-7 first:pt-0 last:pb-0 md:grid-cols-[14rem_1fr] md:gap-12"
                 >
-                  <p className="text-sm leading-loose tracking-[0.16em] text-stone-500">
+                  <p className="text-sm leading-loose tracking-[0.1em] text-stone-500 md:whitespace-nowrap">
                     {history.era}
                   </p>
-                  <p className="leading-[2.05] text-stone-700">
+                  <p className="max-w-2xl leading-[2.1] text-stone-700">
                     {history.text}
                   </p>
                 </article>
@@ -396,17 +392,17 @@ export default function Home() {
       <section id="contact" className="border-y border-stone-200/80 bg-[#fbfaf6]/70 px-6 py-24 sm:py-32">
         <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="animate-fade-up">
-            <p className="text-xs tracking-[0.45em] text-stone-400">
+            <p className="text-xs tracking-[0.45em] text-stone-500">
               CONTACT
             </p>
-            <h2 className="mt-5 font-serif text-3xl font-light tracking-[0.14em] text-stone-900 sm:text-4xl">
+            <h2 className="mt-5 font-serif text-3xl font-light tracking-[0.14em] text-stone-950 sm:text-4xl">
               復興へのお問い合わせ
             </h2>
           </div>
 
           <div className="animate-fade-up font-serif text-stone-700">
             <p className="max-w-2xl leading-[2.25]">
-              龍隠庵の復興、文化活動、見学・取材に関するご連絡は、下記メールアドレスまでお寄せください。内容を確認のうえ、順次ご返信いたします。
+              龍隠庵の復興、作務を中心とした場づくり、見学・取材に関するご連絡は、下記メールアドレスまでお寄せください。内容を確認のうえ、順次ご返信いたします。
             </p>
             <div className="mt-10 grid gap-px bg-stone-200/70 sm:grid-cols-2">
               {contactTopics.map((topic) => (
