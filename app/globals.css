@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f5ef;
+  --background: #f7f6ec;
   --foreground: #1c1917;
 }
 
@@ -19,14 +19,14 @@ body {
 }
 
 ::selection {
-  background: #d8d1c3;
+  background: #d9d9aa;
   color: #1c1917;
 }
 
 .washi-texture {
   background:
-    radial-gradient(circle at 50% 42%, rgb(255 255 255 / 0.78), transparent 34rem),
-    linear-gradient(115deg, rgb(255 255 255 / 0.5), transparent 38%),
+    radial-gradient(circle at 50% 42%, rgb(255 255 248 / 0.76), transparent 34rem),
+    linear-gradient(115deg, rgb(255 255 244 / 0.48), transparent 38%),
     repeating-linear-gradient(
       90deg,
       rgb(28 25 23 / 0.025) 0,
@@ -41,6 +41,19 @@ body {
       transparent 1px,
       transparent 11px
     );
+}
+
+.dragon-mist {
+  background:
+    radial-gradient(circle at 58% 34%, rgb(214 207 116 / 0.28), transparent 31rem),
+    radial-gradient(circle at 38% 62%, rgb(122 145 85 / 0.22), transparent 28rem),
+    linear-gradient(120deg, rgb(246 240 185 / 0.26), transparent 45%);
+}
+
+.moss-wash {
+  background:
+    radial-gradient(circle at 18% 12%, rgb(143 157 91 / 0.12), transparent 26rem),
+    radial-gradient(circle at 82% 82%, rgb(217 205 119 / 0.13), transparent 28rem);
 }
 
 .animate-breathe-in {

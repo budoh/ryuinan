@@ -14,7 +14,7 @@ const programs = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f7f5ef] text-stone-900">
+    <main className="min-h-screen overflow-hidden bg-[#f7f6ec] text-stone-900">
       <section className="relative flex min-h-screen items-center justify-center px-6 py-24">
         <Image
           src="/images/ryuinan-view.jpeg"
@@ -22,16 +22,17 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-38 saturate-[0.62]"
+          className="object-cover object-center opacity-45 saturate-[0.78]"
         />
-        <div className="absolute inset-0 bg-[#f7f5ef]/55" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[#f7f6ec]/48" aria-hidden="true" />
+        <div className="absolute inset-0 dragon-mist mix-blend-soft-light" aria-hidden="true" />
         <div
-          className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,transparent_36%,#f7f5ef_82%)]"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,transparent_36%,#f7f6ec_82%)]"
           aria-hidden="true"
         />
         <div className="absolute inset-0 washi-texture opacity-80" aria-hidden="true" />
         <div
-          className="absolute left-1/2 top-1/2 h-[58vw] max-h-[640px] w-[58vw] max-w-[640px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-stone-300/30 opacity-50 blur-[1px]"
+          className="absolute left-1/2 top-1/2 h-[58vw] max-h-[640px] w-[58vw] max-w-[640px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#b8b06b]/25 opacity-55 blur-[1px]"
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-4xl text-center animate-breathe-in">
@@ -48,7 +49,8 @@ export default function Home() {
       </section>
 
       <section className="relative px-6 py-28 sm:py-36 lg:py-44">
-        <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
+        <div className="absolute inset-0 moss-wash" aria-hidden="true" />
+        <div className="relative mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
           <div className="animate-fade-up">
             <p className="text-xs tracking-[0.45em] text-stone-400">
               ABOUT
@@ -98,8 +100,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 pb-28 sm:pb-36">
-        <div className="mx-auto max-w-6xl">
+      <section className="relative px-6 pb-28 sm:pb-36">
+        <div className="absolute inset-x-0 top-10 h-64 bg-[linear-gradient(180deg,transparent,rgb(226_218_145_/_0.1),transparent)]" aria-hidden="true" />
+        <div className="relative mx-auto max-w-6xl">
           <div className="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
             <figure className="relative h-[360px] overflow-hidden sm:h-[500px]">
               <Image
@@ -107,10 +110,10 @@ export default function Home() {
                 alt="水面に浮かぶ淡い花のしつらえ"
                 fill
                 sizes="(min-width: 1024px) 704px, 100vw"
-                className="object-cover opacity-90 saturate-[0.7]"
+                className="object-cover opacity-92 saturate-[0.82]"
               />
               <div
-                className="absolute inset-0 bg-gradient-to-b from-[#f7f5ef]/10 via-transparent to-[#f7f5ef]/25"
+                className="absolute inset-0 bg-gradient-to-b from-[#f7f6ec]/10 via-transparent to-[#f7f6ec]/20"
                 aria-hidden="true"
               />
             </figure>
@@ -121,10 +124,10 @@ export default function Home() {
                 alt="龍隠起雲と記された書"
                 fill
                 sizes="(min-width: 1024px) 424px, 100vw"
-                className="object-cover object-center opacity-88 saturate-[0.62]"
+                className="object-cover object-center opacity-90 saturate-[0.72]"
               />
               <div
-                className="absolute inset-0 bg-[#f7f5ef]/10"
+                className="absolute inset-0 bg-[#f7f6ec]/10"
                 aria-hidden="true"
               />
             </figure>
