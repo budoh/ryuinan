@@ -12,8 +12,8 @@ const programs = [
   "書道",
   "能・狂言",
   "坐禅",
+  "空手道",
   "鎌倉彫",
-  "学び",
   "交流",
 ];
 
@@ -95,7 +95,7 @@ const supportPathways = [
     text: "楽々庵、積翠軒文庫遺構、参道や境内環境の整備に関するご支援の相談窓口。",
   },
   {
-    title: "場づくり",
+    title: "日々の営み",
     text: "日々の作務を重ねながら、茶の湯、書、芸能、坐禅、工芸などが静かに息づく場を整えていきます。",
   },
   {
@@ -107,13 +107,39 @@ const supportPathways = [
 const contactTopics = [
   "復興支援・寄進のご相談",
   "楽々庵・積翠軒文庫遺構の修復について",
-  "場づくりに関するご相談",
   "見学・取材のお問い合わせ",
 ];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BuddhistTemple",
+  name: "龍隠庵",
+  description:
+    "室町時代創建。北鎌倉・円覚寺塔頭 龍隠庵の由緒、庭、行事、空間について。",
+  url: "https://ryuinan.vercel.app",
+  image: "https://ryuinan.vercel.app/images/ryuinan-hidden-approach.jpeg",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "鎌倉市北鎌倉",
+    addressRegion: "神奈川県",
+    addressCountry: "JP",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 35.337,
+    longitude: 139.546,
+  },
+};
 
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#f7f6ec] text-stone-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+        }}
+      />
       <section id="top" className="relative flex min-h-screen items-center justify-center px-6 py-24">
         <Image
           src="/images/ryuinan-hidden-approach.jpeg"
@@ -406,7 +432,7 @@ export default function Home() {
 
           <div className="animate-fade-up font-serif text-stone-950">
             <p className="max-w-2xl leading-[2.25]">
-              龍隠庵の復興、作務を中心とした場づくり、見学・取材に関するご連絡は、下記メールアドレスまでお寄せください。内容を確認のうえ、順次ご返信いたします。
+              龍隠庵の復興、楽々庵・積翠軒文庫遺構の修復、見学・取材に関するご連絡は、下記メールアドレスまでお寄せください。内容を確認のうえ、順次ご返信いたします。
             </p>
             <div className="mt-10 grid gap-px bg-stone-400/70 sm:grid-cols-2">
               {contactTopics.map((topic) => (
