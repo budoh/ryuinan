@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ScrollReveal from "./components/scroll-reveal";
 
 const siteUrl = "https://ryuinan.vercel.app";
 const siteTitle = "龍隠庵 | 円覚寺塔頭・北鎌倉の禅寺";
@@ -49,7 +50,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className="h-full antialiased">
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <ScrollReveal />
+        {children}
+      </body>
     </html>
   );
 }
